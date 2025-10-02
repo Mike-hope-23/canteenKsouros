@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import client from "./contentfulClient"; // your Contentful client
+import headerImg from "./assets/ksourosheaderu.webp";
+import cardIcon from "./assets/cardicon.webp";
+import irisIcon from "./assets/iris-payments.webp";
 
 const Menu = () => {
   const [foodItems, setFoodItems] = useState([]);
@@ -67,11 +70,7 @@ const Menu = () => {
       <div className="text-white w-full min-h-screen kalam-font relative bg-gradient-to-b from-neutral-800 to-neutral-950">
         {/* Header */}
         <div className="flex justify-center items-center bg-red-600 py-1 mb-8">
-          <img
-            src="src/assets/ksourosheaderu.webp"
-            alt="Kantina Xouros"
-            className="w-[93vw] h-[23vh] mx-auto"
-          />
+<img src={headerImg} alt="Kantina Xouros" className="w-[93vw] h-[23vh] mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8">
@@ -169,16 +168,8 @@ const Menu = () => {
 
         {/* Payment images */}
         <div className="absolute bottom-6 right-8 flex items-end space-y-2">
-          <img
-            src="src/assets/cardicon.webp"
-            alt="Visa"
-            className="h-16 md:h-52"
-          />
-          <img
-            src="src/assets/iris-payments.webp"
-            alt="Iris"
-            className="h-16 md:h-52"
-          />
+<img src={cardIcon} alt="Visa" className="h-16 md:h-52" />
+<img src={irisIcon} alt="Iris" className="h-16 md:h-52" />
         </div>
 
         {/* Table Footnotes */}
